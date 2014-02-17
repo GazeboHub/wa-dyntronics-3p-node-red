@@ -1,0 +1,15 @@
+[submodule "tree/flow-library"]
+	path = tree/flow-library
+	url = git@github.com:node-red/flow-library.git
+[submodule "tree/node-red"]
+	path = tree/node-red
+	url = git@github.com:node-red/node-red.git
+[submodule "tree/node-red.github.io"]
+	path = tree/node-red.github.io
+	url = git@github.com:node-red/node-red.github.io.git
+[submodule "tree/node-red-nodes"]
+	path = tree/node-red-nodes
+	url = git@github.com:node-red/node-red-nodes.git
+[submodule "tree/node-red.wiki"]
+	path = tree/node-red.wiki
+	url = git@github.com:node-red/node-red.wiki.git
