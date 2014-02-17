@@ -39,7 +39,7 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
                   the value of the script element's `data-help-name`
                   attribute.
             * Contents: pseudo-HTML `div` blocks containing effective
-              _form input fields_ and _field label_ values (that, in
+              _form input fields_ and _field label_ values (in
               `data-template-name` script elements), or HTML markup (in
               `data-help-name` script elements)
             * Usage: The HTML file provides an interface to programmtic logic implemented in the correspnding JavaScript format node definition file?
