@@ -24,8 +24,20 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
     * File `tree/node-red/nodes/99-sample.html.demo` and similar HTML files under `tree/node-red/nodes/core/`
         * Note the uses of `script type="text/x-red"`
             * Attributes on the script element: Various, non-standard
-                * `data-template-name` - defines a forms interface for configuring a _node type_ defined in a corresponding JavaScript `script` block located within the same file
-                * `data-help-name` - defines documentation about that same _node type_
+                * xpath
+                  `script[@type='text/x-red' and @data-template-name]` -
+                  script element defines a forms interface for
+                  configuring a _node type_ defined in a corresponding
+                  JavaScript `script` block located within the same
+                  file. Typically, that _node type_ is denoted with
+                  the value of the script element's
+                  `data-template-name` attribute.
+                * xpath
+                  `script[@type='text/x-red' and @data-help-name]` -
+                  script element defines documentation about that same
+                  _node type_. Typically, that _node type_ is denoted with
+                  the value of the script element's `data-help-name`
+                  attribute.
             * Contents: pseudo-HTML `div` blocks containing effective _form input fields_ and _field label_ values, or HTML markup
             * Usage: The HTML file provides an interface to programmtic logic implemented in the correspnding JavaScript format node definition file?
         * Refer to `script type="text/javascript"` elements, whose contents would typically represent node type registration calls, namely in HTML files under `tree/node-red/nodes/core/`
