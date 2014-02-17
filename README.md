@@ -47,7 +47,7 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
               JavaScript format node type definition file, as well as
               presentational qualities for the node type, in a node
               graph
-        * Refer to `script type="text/javascript"` elements, whose contents would typically represent node type registration calls, namely in HTML files under `tree/node-red/nodes/core/`
+        * Refer to `script[@type='text/javascript']` elements, whose contents would typically represent node type registration calls, namely in HTML files under `tree/node-red/nodes/core/`
             * Refer to those contained calls made to `RED.nodes.registerType(...)`, for determining node configuration properties (node logic and presentation) such as would be available for _node type_ representation in a corresponding UML model - see, for example the file `tree/node-red/nodes/core/32-udp.html`
     * How do the node type definitions interact with actual network
       elements, in a node network?
