@@ -43,7 +43,7 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
               `data-template-name` script elements), or HTML markup (in
               `data-help-name` script elements)
             * Usage: The HTML file provides an interface onto
-              programmtic logic implemented in the correspnding
+              programmatic logic implemented in the correspnding
               JavaScript format node type definition file, as well as
               presentational qualities for the node type, in a node
               graph
