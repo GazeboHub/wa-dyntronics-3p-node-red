@@ -74,7 +74,7 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
       elements, in a node network?
         * See, for instance `setupTcpClient()` in
           `tree/node-red/nodes/core/io/31-tcpin.js`
-        * Connection is to `node.host` and `node.port`
+            * Connection is to `node.host` and `node.port`
     * Flat node type schema
         * Note that the nodes type definitions do not use an API for
           class _mixin_ or _abstract_ class inheritance, thus making
