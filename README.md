@@ -8,3 +8,7 @@ Goals:
 * Add electrical component ratings to meta-model – current draw, etc (SysML block via UML profile - UML stereotypes - tagged values)
 * Add vendor information to meta-model (SysML...)
 * Add data sheet references to meta-model (SysML...)
+
+Notes:
+* Node Red uses JavaScript and HTML for node modeling. 
+* To do: Define a model transform methodology for interpreting Node Red node models as SysML diagram 'block' elements, esch applying a 'NodeRed::Node' UML stereotype
