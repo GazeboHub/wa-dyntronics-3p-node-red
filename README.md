@@ -5,23 +5,36 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
 
 **Goals:**
 
-* SysML compatibility - Develop a third party UML profile for Node Red models, supporting transform to/from Node Red  (Modelio platform)
-* Add electrical component ratings to meta-model – current draw, etc (SysML block via UML profile - UML stereotypes - tagged values)
+* SysML compatibility - Develop a third party UML profile for Node Red
+  models, supporting transform to/from Node Red  (Modelio platform / EMF)
+* Add electrical component ratings to meta-model – current draw, etc
+  (SysML block via UML profile - UML stereotypes - tagged values)
 * Add vendor information to meta-model (SysML...)
 * Add data sheet references to meta-model (SysML...)
 
 **Notes:**
 
 * Node Red uses JavaScript and HTML for node modeling
-    * A generic `Node` data type is extended with various node definitions provided in the Node Red codebase (hardware - Arduino, Raspberry Pi GPIO; protocols - MQTT, HTTP, WebSocket, generic TCP, UDP, etc; etc.)
+    * A generic `Node` data type is extended with various node
+      definitions provided in the Node Red codebase (hardware -
+      Arduino, Raspberry Pi GPIO; protocols - MQTT, HTTP, WebSocket,
+      generic TCP, UDP, etc; etc.)
     * Logic and presentation
-* To do: Define a model transform methodology for interpreting Node Red node models as SysML diagram 'block' elements, esch applying a 'NodeRed::Node' UML stereotype
-    * Is the Node Red _node_ API too heterogenous for that transform to provide modeling for any more speicific qualities beyond a generic mapping of UML elements to JavaScript objects?
+* To do: Define a model transform methodology for interpreting Node
+  Red node models as SysML diagram 'block' elements, esch applying a
+  'NodeRed::Node' UML stereotype
+    * Is the Node Red _node_ API too heterogenous for that transform
+      to provide modeling for any more speicific qualities beyond a
+      generic mapping of UML elements to JavaScript objects?
 * Referring to the example code:
     * File `tree/node-red/nodes/99-sample.js.demo`
-        * makes reference to `tree/node-red/red/red.js` (JavaScript `require` reference)
-        * creates JavaScript _node_ objects via `RED.nodes.createNode(node,def)` - refer to file `tree/node-red/red/nodes.js`
-    * File `tree/node-red/nodes/99-sample.html.demo` and similar HTML files under `tree/node-red/nodes/core/`
+        * makes reference to `tree/node-red/red/red.js` (JavaScript
+          `require` reference)
+        * creates JavaScript _node_ objects via
+          `RED.nodes.createNode(node,def)` - refer to file
+          `tree/node-red/red/nodes.js`
+    * File `tree/node-red/nodes/99-sample.html.demo` and similar HTML
+      files under `tree/node-red/nodes/core/`
         * Note the uses of `script type="text/x-red"`
             * Attributes on the script element: Various, non-standard
                 * xpath
@@ -47,8 +60,16 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
               JavaScript format node type definition file, as well as
               presentational qualities for the node type, in a node
               graph
-        * Refer to `script[@type='text/javascript']` elements, whose contents would typically represent node type registration calls, namely in HTML files under `tree/node-red/nodes/core/`
-            * Refer to those contained calls made to `RED.nodes.registerType(...)`, for determining node configuration properties (node logic and presentation) such as would be available for _node type_ representation in a corresponding UML model - see, for example the file `tree/node-red/nodes/core/32-udp.html`
+        * Refer to `script[@type='text/javascript']` elements, whose
+          contents would typically represent node type registration
+          calls, namely in HTML files under
+          `tree/node-red/nodes/core/`
+            * Refer to those contained calls made to
+              `RED.nodes.registerType(...)`, for determining node
+              configuration properties (node logic and presentation)
+              such as would be available for _node type_
+              representation in a corresponding UML model - see, for
+              example the file `tree/node-red/nodes/core/32-udp.html`
     * How do the node type definitions interact with actual network
       elements, in a node network?
         * See, for instance `setupTcpClient()` in
