@@ -1,18 +1,30 @@
-wa-dyntronics-3p-node-red
-=========================
-
 Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
+=================================================================
 
-**Goals:**
+Work Area Source Repository: [wa-dyntronics-3p-node-red](https://github.com/GazeboHub/wa-dyntronics-3p-node-red)
+
+See Also: [_Integrating DIY Electronics Projects into Dynamic Scientific Practices and Lifestyles_ - Gazebo Hub Work Area](https://github.com/GazeboHub/wa-dyntronics)
+
+## Overview
+
+[Node-RED](http://nodered.org/) defines an API in HTML and JavaScript, for defining models comprised of _node_ elements and _flow_  associations. Broadly, Node-RED defines an implicit _meta-model_ within that API, such that a Node-RED _model_ may be represented with a SysML _block diagram_ - ostensibly, via the SysML4UML subset, using a UML _profile_ extending on SysML.
+
+Pragmatically, a SysML model for Node-RED _node networks_ may be implemented in EMF, then supported with a domain-specific application of the Eclipse IDE. 
+
+Abstractly, Node-RED provides a simple example of a network device control system, such that may serve as making an interesting study before studying more complex frameworks such as [Fieldbus](http://www.fieldbus.org/).
+
+Regular Node-RED usage: Refer to [Node-RED _Getting Started_ Guide](http://nodered.org/docs/getting-started/)
+
+## Goals
 
 * SysML compatibility - Develop a third party UML profile for Node Red
-  models, supporting transform to/from Node Red  (Modelio platform / EMF)
+  models, supporting transform to/from Node Red  (Modelio platform / EMF, Rhino, Xerces-J)
 * Add electrical component ratings to meta-model – current draw, etc
   (SysML block via UML profile - UML stereotypes - tagged values)
 * Add vendor information to meta-model (SysML...)
 * Add data sheet references to meta-model (SysML...)
 
-**Notes:**
+## Notes
 
 * Node Red uses JavaScript and HTML for node modeling
     * A generic `Node` data type is extended with various node
@@ -21,7 +33,7 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
       generic TCP, UDP, etc; etc.)
     * Logic and presentation
 * To do: Define a model transform methodology for interpreting Node
-  Red node models as SysML diagram 'block' elements, esch applying a
+  Red node models as SysML diagram 'block' elements, each applying a
   'NodeRed::Node' UML stereotype
     * Is the Node Red _node_ API too heterogenous for that transform
       to provide modeling for any more speicific qualities beyond a
@@ -35,7 +47,7 @@ Gazebo Hub Dyntronics Work Area - 3rd Party Components - Node Red
           `tree/node-red/red/nodes.js`
     * File `tree/node-red/nodes/99-sample.html.demo` and similar HTML
       files under `tree/node-red/nodes/core/`
-        * Note the uses of `script type="text/x-red"`
+        * Note the usage of `script type="text/x-red"`
             * Attributes on the script element: Various, non-standard
                 * xpath
                   `script[@type='text/x-red' and @data-template-name]` -
